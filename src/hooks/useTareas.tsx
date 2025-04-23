@@ -33,7 +33,7 @@ export const useTareas = () => {
     };
     
     const putTareaEditar =async (tareaEditada:ITarea)=>{
-        const estadoPevio = tareas.find((el)=>el.id == tareaEditada.id)
+        const estadoPevio = tareas.find((el)=>el.id === tareaEditada.id)
         editarUnaTarea(tareaEditada)
         try{
             await editarTarea(tareaEditada);

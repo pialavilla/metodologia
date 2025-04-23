@@ -4,23 +4,38 @@
     align-items: center;
     padding: 2rem;
     flex-direction:column;
+    gap: 2rem;
 }
 .containerTileAndButton{
     display:flex;
     justify-content: space-around;
     gap:1rem;
     width: 70%;
+    display: flex;               /* Para alinear texto e ícono */
+    align-items: center;        /* Centrar verticalmente */
+    justify-content: center;    /* Centrar horizontalmente */
+
 }
-.containerList{
+.ContainerList{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:1rem;
+    gap: 1rem;
     padding:1rem;
-    background-color:rosybrown;
+    background-color:rgb(243, 204, 247);
     width: 70%;
     min-height: 60vh;
     max-height: 62vh;
     overflow-y: auto;
     border-radius: 0.4rem;
+    
+}
+.buttonAgregarTarea{
+    background-color: rgb(172, 117, 224);
+    color:white;
+    align-items: right;
+    justify-content: rigth;
+    border-radius:0.6rem;
+    border:none;
+    padding:5px;
 }

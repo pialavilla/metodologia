@@ -1,8 +1,8 @@
 import { TareasScreen } from "./components/ui/screens/TareasScreen"
 
 function App() {
-    return <div>
-    <TareasScreen></TareasScreen>
-    </div>
+    return (
+    <TareasScreen/>
+    )
 }
 export default App

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Header } from "../Header/Header";
 import { useTareas } from "../../../hooks/useTareas";
 import { CardList } from "../CardList/CardList";
+import { ListTareas } from "../ListTareas/ListTareas";
 
 export const TareasScreen = () => {
     const { tareas, getTareas } = useTareas();
@@ -14,14 +15,7 @@ export const TareasScreen = () => {
     return (
         <div>
             <Header />
-            <h2>Lista de Tareas</h2>
-            {tareas.length > 0 ? (
-                tareas.map((tarea) => (
-                    <CardList key={tarea.id} tarea={tarea} handleOpenModalEdit={() => {}} />
-                ))
-            ) : (
-                <p>No hay tareas disponibles</p>
-            )}
+            <ListTareas/>
         </div>
     );
 };

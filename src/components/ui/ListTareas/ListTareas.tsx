@@ -5,7 +5,7 @@ import { CardList } from '../CardList/CardList';
 import { useTareas } from '../../../hooks/useTareas';
 import { ITarea } from '../../../types/ITarea';
 import { Modal } from '../Modal/Modal';
-export function ListTareas() {
+export const ListTareas=()=>{
 
     const setTareaActiva = tareaStore((state) => state.setTareaActiva);
 
@@ -16,12 +16,10 @@ export function ListTareas() {
     }, []);
 
     const [openModalTarea, setOpenModalTarea] = useState(false);
-
-    const handleOpenModalEdit = (tarea: ITarea) => {
-        setTareaActiva(tarea);
-        setOpenModalTarea(true);
-    };
-
+    const handleOpenModalEdit=(tarea:ITarea)=>{
+        setTareaActiva(tarea)
+        setOpenModalTarea(true)
+    }
     const handleCloseModal = () => { setOpenModalTarea(false); };
 
     return (
@@ -29,7 +27,7 @@ export function ListTareas() {
             <div className={styles.containerPrincipalListTareas}>
                 <div className={styles.containerTileAndButton}>
                     <h2>Lista de tareas</h2>
-                    <button>Agregar tarea</button>
+                    <button className={styles.buttonAgregarTarea} onClick={()=>{setOpenModalTarea(true)}}>Agregar tarea</button>
                 </div>
                 <div className={styles.ContainerList}>
                     {tareas.length > 0 ?
